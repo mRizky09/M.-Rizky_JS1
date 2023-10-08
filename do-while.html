@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do while</title>
+</head>
+<body>
+    <script>
+        function nebakHatiPacar() {
+    var jawabanBenar = "Aku juga cinta kamu";
+    var jawaban;
+    var percobaan = 0;
+
+    // Menggunakan do while
+    do {
+        // Mengambil jawaban dari pengguna (menggunakan prompt di browser)
+        jawaban = prompt("Apa yang ada di hati kamu? ");
+
+        // Mengecek jawaban
+        if (jawaban.toLowerCase() === jawabanBenar.toLowerCase()) {
+            alert("Benar sekali! Aku juga merasakan hal yang sama.");
+        } else {
+            alert("Hmm, sepertinya kita perlu lebih saling mengenal.");
+            percobaan++;
+        }
+    } while (jawaban.toLowerCase() !== jawabanBenar.toLowerCase());
+
+    // Menggunakan while
+    while (true) {
+        var lanjut = prompt("Apakah kamu ingin mencoba lagi? (ya/tidak) ");
+        if (lanjut.toLowerCase() === "tidak") {
+            break;
+        } else if (lanjut.toLowerCase() === "ya") {
+            percobaan = 0;
+            alert("Oke, ayo kita coba lagi!");
+            break;
+        } else {
+            alert("Jawaban tidak jelas, ketik 'ya' atau 'tidak'.");
+        }
+    }
+
+    return "Kamu berhasil menebak hati pacar dalam " + percobaan + " percobaan.";
+}
+
+// Contoh penggunaan fungsi
+var hasil = nebakHatiPacar();
+console.log(hasil);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if else - nested is</title>
+</head>
+<body>
+ <script>
+  function hitungTotal(harga, jumlah) {
+  var diskon = 0;
+
+ 
+  if (jumlah >= 10) {
+    diskon = 0.2; 
+    if (harga >= 50000) {
+      diskon = 0.3; 
+    }
+  } else if (jumlah >= 5) {
+    diskon = 0.1; 
+  }
+
+  
+  var total = harga * jumlah * (1 - diskon);
+
+  
+  return total;
+}
+
+var harga = 10000;
+var jumlah = 11;
+var total = hitungTotal(harga, jumlah);
+console.log("Total harga setelah diskon: " + total);
+ </script>
+</body>
+</html>

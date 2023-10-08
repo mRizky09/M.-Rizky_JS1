@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Statment</title>
+</head>
+<body>
+    <script>
+        function ceritaLucu(jumlahOrang) {
+    var cerita = "";
+   
+    for (var i = 1; i <= jumlahOrang; i++) {
+        cerita += "Orang ke-" + i + " masuk ke dalam lift.\n";
+    }
+
+    cerita += "Liftnya penuh, semua orang harus keluar!\n";
+
+    for (var j = jumlahOrang; j >= 1; j--) {
+        cerita += "Orang ke-" + j + " keluar dari lift.\n";
+    }
+
+    cerita += "Sekarang liftnya kosong lagi.\n";
+
+    return cerita;
+}
+
+
+var jumlahOrang = 5;
+var cerita = ceritaLucu(jumlahOrang);
+console.log(cerita);
+
+    </script>
+</body>
+</html>

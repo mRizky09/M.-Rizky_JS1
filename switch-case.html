@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switc case</title>
+</head>
+<body>
+    <script>
+        function nembakPacar(jawaban) {
+    var pesan;
+    
+    switch (jawaban) {
+        case "iya":
+            pesan = "Selamat, kalian sekarang resmi pacaran!";
+            break;
+        case "mungkin":
+            pesan = "Kamu bisa mencoba lebih baik, jangan menyerah!";
+            break;
+        case "tidak":
+            pesan = "Tetap semangat, masih banyak ikan di laut!";
+            break;
+        default:
+            pesan = "Jawaban tidak jelas, coba tanya lagi.";
+            break;
+    }
+    return pesan;
+}
+
+
+var jawaban = "mungkin";
+var pesan = nembakPacar(jawaban);
+console.log(pesan);
+
+    </script>
+</body>
+</html>
